@@ -9,7 +9,7 @@
         if($query->num_rows > 0){
             $res=array('status' => 200);
         }
-        else if($query->num_rows < 0){
+        else if(isset($query)){
             $res=array('status' => 500,'mess'=>'ingrese sus credenciales');
         }
         
