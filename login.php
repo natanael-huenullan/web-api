@@ -10,11 +10,11 @@
             $res=array('status' => 200);
         }
         else if($query->num_rows < 0){
-            $res=array('status' => 500,'mess'=>'usuario o password incorrecto');
+            $res=array('status' => 500,'mess'=>'ingrese sus credenciales');
         }
         
         else{
-            $res=array('status' => 404,'mess'=>'error interno');
+            $res=array('status' => 404,'mess'=>'ingrese sus credenciales');
         }
         echo json_encode($res);
     }
