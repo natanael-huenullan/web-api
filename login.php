@@ -8,10 +8,8 @@
         $query = mysqli_query($con, "SELECT * FROM usuarios WHERE nombre = '$nombre' AND telefono = '$telefono'");
         if($query->num_rows > 0){
             $res=array('status' => 200);
-        }
-        else if(isset($query)){
-            if ($query->num_rows < 0){$res=array('status' => 500,'mess'=>'ingrese sus credenciales');}
-            if ($query != $con){$res=array('status' => 500,'mess'=>'valores invalios');}
+        }else{
+            $res=array('status' => 500,'mess'=>'usuario o password incorrecto');
         }
         echo json_encode($res);
     }
