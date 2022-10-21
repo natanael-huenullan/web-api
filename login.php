@@ -11,7 +11,7 @@
         }else if{
             $res=array('status' => 500,'mess'=>'error al copilar datos');
         }
-        else if{
+        else{
             $res=array('status' => 404,'mess'=>'error, datos invalidos');
         }
         echo json_encode($res);
