@@ -9,7 +9,7 @@
         if($query->num_rows > 0){
             $res=array('status' => 200);
         }
-        else if(!$query){
+        else if($query->num_rows != $query){
             $res=array('status' => 500,'mess'=>'usuario o password incorrecto');
         }
         
