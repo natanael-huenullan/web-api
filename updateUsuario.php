@@ -6,9 +6,12 @@
     $nombre = $data['nombre'];
     $telefono = $data['telefono'];
     $email = $data['email'];
+    $apaterno = $data['ApellidoP'];
+    $amaterno = $data['ApellidoM'];
+    $contrasena = $data['contrasena'];
     $id = $_GET['id'];
 
-    $q = mysqli_query($con, "UPDATE usuarios SET nombre = '$nombre', telefono = '$telefono', email = '$email' WHERE id = '{$id}' LIMIT 1");
+    $q = mysqli_query($con, "UPDATE usuarios SET nombre = '$nombre', telefono = '$telefono', email = '$email', ApellidoP = '$apaterno', ApellidoM = '$amaterno', contrasena = '$contrasena' WHERE id = '{$id}' LIMIT 1");
 
     if ($q){
         http_response_code(201);
