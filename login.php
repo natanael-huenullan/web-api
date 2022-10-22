@@ -3,9 +3,9 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
-        $nombre = $data['nombre'];
-        $telefono =$data['telefono'];
-        $query = mysqli_query($con, "SELECT * FROM usuarios WHERE nombre = '$nombre' AND telefono = '$telefono'");
+        $correo = $data['correo'];
+        $contrasena =$data['contrasena'];
+        $query = mysqli_query($con, "SELECT * FROM usuarios WHERE correo = '$correo' AND contrasena = '$contrasena'");
         if($query->num_rows > 0){
             $res=array('status' => 200);
         }else{
